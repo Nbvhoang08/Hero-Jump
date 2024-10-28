@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52e40708484487aabdd44808a5a84b4, type: 3}
+  m_Name: DataGame
+  m_EditorClassIdentifier: 
+  characterPrefabs:
+  - {fileID: 7145536479292116706, guid: c4e5dc3cc49624752b6b429fd08a10c8, type: 3}
+  - {fileID: 8682392506794375026, guid: 6235f1ce628674547b0df1940d4c64a4, type: 3}
+  - {fileID: 1531677553174463426, guid: eafc19d33da98437195b8c3f989b1694, type: 3}
+  selectedCharacter: {fileID: 7145536479292116706, guid: c4e5dc3cc49624752b6b429fd08a10c8, type: 3}
+  terrainSprites:
+  - {fileID: 21300000, guid: 618439a5e001147d6a3cf1aa05f136dc, type: 3}
+  - {fileID: 21300000, guid: 9026ff96139fc4822910e888c20eb50d, type: 3}
+  - {fileID: 21300000, guid: ecfdd53abcc524b82bc61c9e64162fcb, type: 3}
+  - {fileID: 21300000, guid: 19089263d388346ec99e240bba838a22, type: 3}
+  - {fileID: 21300000, guid: 01689b08952f8458e839c45d4f65afd6, type: 3}
+  - {fileID: 21300000, guid: f36f28f6ac430463f9837d85fcc88ee5, type: 3}
+  - {fileID: 21300000, guid: 171e34c0450264313b5a0d0c359f87e2, type: 3}
+  - {fileID: 21300000, guid: 78aa690c639eb4771ad6a3a7bf856809, type: 3}
+  characterPrices: 000000006400000096000000
+  selectedTerrain: {fileID: 0}
