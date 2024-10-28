@@ -19,6 +19,10 @@ namespace Script
             {
                 selectedCharacter = characterPrefabs[0];
             }
+            if (terrainSprites.Count > 0 && terrainSprites != null)
+            {
+                selectedTerrain = terrainSprites[0];
+            }
         }
     }
 }

@@ -167,11 +167,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6530401928828876337, guid: 082f341d39a6946a18081d9ccae20798, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6530401928828876337, guid: 082f341d39a6946a18081d9ccae20798, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6530401928828876337, guid: 082f341d39a6946a18081d9ccae20798, type: 3}
       propertyPath: m_LocalPosition.z
@@ -220,6 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 507372015}
   - component: {fileID: 507372014}
+  - component: {fileID: 507372016}
   m_Layer: 0
   m_Name: BGmap3 (1)
   m_TagString: Untagged
@@ -288,12 +289,27 @@ Transform:
   m_GameObject: {fileID: 507372013}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0834, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5497142, y: 0.55418545, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &507372016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507372013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9be9d03290dfc84d9fd2e960b6a2b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  distanceThreshold: 14.5
+  moveAmount: 30
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   smoothSpeed: 0.125
-  offset: {x: 0, y: 2.8, z: 0}
+  offset: {x: 0, y: 2, z: 0}
 --- !u!1 &718772097
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718772099}
   - component: {fileID: 718772098}
+  - component: {fileID: 718772100}
   m_Layer: 0
   m_Name: BGmap3
   m_TagString: Untagged
@@ -486,6 +503,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718772100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718772097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9be9d03290dfc84d9fd2e960b6a2b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  distanceThreshold: 14
+  moveAmount: 30
 --- !u!1 &927592420
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,11 +660,6 @@ MonoBehaviour:
   playerPrefab: {fileID: 0}
   dataGame: {fileID: 11400000, guid: 42c5425086e50436f877b12c16f9dce9, type: 2}
   spawnPos: {fileID: 320309104}
-  backgrounds:
-  - {fileID: 718772097}
-  - {fileID: 507372013}
-  backgroundHeight: 14
-  scrollSpeed: 10
   player: {fileID: 0}
 --- !u!1 &1078590183
 GameObject:
@@ -644,6 +671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1078590185}
   - component: {fileID: 1078590184}
+  - component: {fileID: 1078590186}
   m_Layer: 0
   m_Name: BGmap3 (2)
   m_TagString: Untagged
@@ -718,6 +746,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1078590186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078590183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9be9d03290dfc84d9fd2e960b6a2b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  distanceThreshold: 14
+  moveAmount: 30
 --- !u!1 &1327129542
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,7 +930,7 @@ Transform:
   m_GameObject: {fileID: 1896438740}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0884, y: -4.5207, z: -0.064787574}
+  m_LocalPosition: {x: 0.0884, y: -5.14, z: -3.58}
   m_LocalScale: {x: 6.878859, y: 1.1013321, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

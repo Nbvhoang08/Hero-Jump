@@ -177,6 +177,7 @@ namespace Script
             isCharging = false;
             currentForce = minForce;
             aimLine.enabled = false;
+            SoundManger.Instance.PlayPopUpSound();
         }
 
         private void OnDrawGizmos()

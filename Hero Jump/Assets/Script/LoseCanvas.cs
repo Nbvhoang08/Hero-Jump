@@ -6,6 +6,17 @@ namespace Script
 {
     public class LoseCanvas :UICanvas
     {
+        public Sprite OnVolume;
+        public Sprite OffVolume;
+
+        [SerializeField] private Image buttonImage;
+
+        void OnEnable()
+        {
+
+            UpdateButtonImage();
+
+        }
         public void RetryBtn()
         {
             UIManager.Instance.ResumeGame();
@@ -21,14 +32,29 @@ namespace Script
 
         public void SoundBtn()
         {
-            
+            SoundManger.Instance.TurnOn = !SoundManger.Instance.TurnOn;
+            UpdateButtonImage();
         }
 
         IEnumerator LoadHomeSence()
         {
             yield return new WaitForSeconds(0.2f);
+            UIManager.Instance.CloseAll();
             UIManager.Instance.OpenUI<LoadingCanvas>();
             
+        }
+      
+
+        private void UpdateButtonImage()
+        {
+            if (SoundManger.Instance.TurnOn)
+            {
+                buttonImage.sprite = OnVolume;
+            }
+            else
+            {
+                buttonImage.sprite = OffVolume;
+            }
         }
     }
 }
